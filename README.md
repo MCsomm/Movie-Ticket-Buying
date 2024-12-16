@@ -6,8 +6,8 @@ The **Movie Ticket Booking System** is a web-based application developed using t
 
 ### For Users:
 - **User Registration and Login**: Secure authentication for users to book tickets.
-- **Movie Listings**: View a list of currently available movies with details (title, description, duration, and poster).
-- **Seat Selection**: Select available seats for a specific movie and showtime.
+- **Movie Listings**: View a list of currently available movies with details (title, description, duration).
+- **Seat Selection**: Select available seats for a specific movie and showtime, with interactive seating.
 - **Booking Confirmation**: Receive confirmation of booked tickets with details like seat number and showtime.
 - **Search and Filter**: Search movies by title, genre, or date.
   
@@ -15,7 +15,6 @@ The **Movie Ticket Booking System** is a web-based application developed using t
 - **Movie Management**: Add, edit, or delete movies, including title, description, poster, and showtimes.
 - **Theater Management**: Manage available theaters and seat availability.
 - **Booking Overview**: View all bookings made by users.
-- **User Management**: Manage registered users and their activities.
 
 ## Technologies Used
 
