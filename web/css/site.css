@@ -1,0 +1,330 @@
+main > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    height: 60px;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* --------------------
+   Styles for Book.php
+-------------------- */
+
+.info-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    border-top: 3px solid #000;
+}
+
+.customer-info-box {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #000; /* Black outline for the left box */
+    box-sizing: border-box;
+    border-top: none; /* Includes padding in the width calculation */
+}
+
+.customer-info-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.customer-info-field label {
+    margin-right: 10px;
+    font-weight: bold;
+    width: 50px;
+}
+
+.customer-info-field input {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.movie-details-box {
+    flex: 1;
+    padding: 15px;
+    box-sizing: border-box;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.summary-info {
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.summary-value {
+    font-weight: normal;
+}
+
+/* Seat Selection Section CSS */
+
+/* --------------------
+   Styles for Eloadas Index
+-------------------- */
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-container .form-group {
+    margin-right: 10px; /* Add space between fields */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.mr-2 {
+    margin-right: 10px; /* Add a small margin to separate Search and Reset buttons */
+}
+
+/* --------------------
+   Styles for Admin View
+-------------------- */
+
+.info-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    border-top: 3px solid #000;
+}
+
+.movie-details-box,
+.sold-tickets-box {
+    flex: 1;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.sold-tickets-box {
+    border-left: 1px solid #000;
+}
+
+.seat-selection {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding-top: 20px; /* Adds padding to provide space for the extended vertical line */
+}
+
+.theatre-layout {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.seat-table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.seat-table th,
+.seat-table td {
+    padding: 0;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.inner-seat {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #000;
+    margin: 5px;
+    background-color: #fff;
+}
+
+.available {
+    background-color: #fff;
+}
+
+/* Seat Selection Section CSS */
+/* Only apply the hover effect to seats within the 'interactive-seats' container on the booking page */
+.interactive-seats .interactive .inner-seat:hover {
+    border-color: #007bff; /* Change border color to indicate interactivity (e.g., blue) */
+    background-color: #007bff; /* Change the background color to give a highlighted effect */
+    cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+}
+
+/* Disable hover and cursor for admin-view seats explicitly */
+.admin-view-seats .available .inner-seat:hover {
+    border-color: #000; /* Keep the border color unchanged */
+    background-color: #fff; /* Keep the background color unchanged */
+    cursor: default; /* Set cursor to default to indicate non-interactivity */
+}
+
+/* Styling for booked and selected seats remains the same */
+.booked .inner-seat {
+    background-color: #f00; /* Booked seats are red */
+}
+
+.selected .inner-seat {
+    background-color: #00f; /* Selected seats are blue */
+    color: #fff;
+}
+
+
+
+
+.vertical-line {
+    position: absolute;
+    left: 80px;
+    top: -20px;
+    bottom: -20px;
+    width: 2px;
+    background-color: black;
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+}
+
+.diagonal-cell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.diagonal-cell::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 49.5%, black 49.5%, black 50.5%, transparent 50.5%);
+}
+
+.oszlop-label {
+    position: absolute;
+    top: 12px;
+    right: -14px;
+    font-weight: bold;
+    font-size: 0.7em;
+    background: white;
+    padding: 0px 0px;
+    transform: rotate(270deg);
+}
+
+.sor-label {
+    position: absolute;
+    bottom: 25px;
+    left: 14px;
+    font-size: 1em;
+    font-weight: bold;
+    background: white;
+    padding: 0.2px 0.2px;
+}
+
+.admin-buttons {
+    margin: 20px 0;
+}
+
+.btn {
+    margin-right: 10px;
+}
